@@ -73,7 +73,7 @@ public partial class MainPage : ContentPage
         {
             // Transmisión a 38kHz
             _irService.Transmit(38000, _samsungPowerPattern);
-            StatusLabel.Text = "Comando Samsung enviado";
+            StatusLabel.Text = "Comando Samsung enviado.";
             StatusLabel.TextColor = Colors.LightBlue;
         }
         catch (Exception ex)
