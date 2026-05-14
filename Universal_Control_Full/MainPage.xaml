@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Universal_Control_Full.MainPage"
+             BackgroundColor="#0F172A">
+
+  <ScrollView>
+    <VerticalStackLayout Padding="30" Spacing="25" VerticalOptions="Center">
+
+      <Label Text="TGM SMART CONTROL"
+             TextColor="#38BDF8"
+             FontSize="24"
+             FontAttributes="Bold"
+             HorizontalOptions="Center" />
+
+      <Border Stroke="#334155" StrokeThickness="2" Padding="20" StrokeShape="RoundRectangle 20" BackgroundColor="#1E293B">
+        <VerticalStackLayout HorizontalOptions="Center">
+          <Label x:Name="TempLabel" Text="24°C" FontSize="70" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+          <Label Text="MODO: FRÍO / AUTO" TextColor="#94A3B8" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+      </Border>
+
+      <Button x:Name="PowerBtn"
+                    Text="AIRE TGM"
+                    BackgroundColor="#EF4444"
+                    TextColor="White"
+                    HeightRequest="80"
+                    CornerRadius="40"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    Clicked="OnPowerClicked" />
+
+      <Button x:Name="SamsungBtn"
+              Text="TV SAMSUNG"
+              BackgroundColor="#3B82F6"
+              TextColor="White"
+              HeightRequest="80"
+              CornerRadius="40"
+              FontSize="20"
+              FontAttributes="Bold"
+              Clicked="OnSamsungClicked" />
+
+      <Grid ColumnDefinitions="*, *" ColumnSpacing="20">
+        <Button Grid.Column="0" Text="TEMP -" BackgroundColor="#334155" HeightRequest="70" Clicked="OnTempDownClicked" FontSize="18"/>
+        <Button Grid.Column="1" Text="TEMP +" BackgroundColor="#334155" HeightRequest="70" Clicked="OnTempUpClicked" FontSize="18"/>
+      </Grid>
+
+      <Label x:Name="StatusLabel"
+             Text="Sistema listo"
+             TextColor="#64748B"
+             HorizontalOptions="Center"
+             FontSize="14"/>
+
+    </VerticalStackLayout>
+  </ScrollView>
+</ContentPage> 
